@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { fetchCharacters } from '../services/fetch-calls';
 
 export default class ListOfCharacters extends Component {
 
@@ -8,8 +9,7 @@ export default class ListOfCharacters extends Component {
   }
 
   componentDidMount = () => {
-    fetch('https://last-airbender-api.herokuapp.com/api/v1/characters')
-      .then(res => res.json())
+    fetchCharacters()
       .then(characters => this.setState({ characters }));
   }
 
