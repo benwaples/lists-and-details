@@ -3,9 +3,10 @@ import {
   BrowserRouter as Router, 
   Route, 
   Switch,
-  Link,
 } from 'react-router-dom';
-import ListOfCharacters from './components/ListOfCharacters';
+import DetailPage from '../DetailPage';
+import ListOfCharacters from '../ListOfCharacters';
+
 
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
           render={(routerProps) => <ListOfCharacters {...routerProps} />} 
         />
         <Route 
-          path="/detail/:myPokemonId" 
+          path="/detail/:characterId" 
           exact
           render={(routerProps) => <DetailPage {...routerProps} />} 
         />

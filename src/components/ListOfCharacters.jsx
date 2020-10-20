@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class ListOfCharacters extends Component {
 
@@ -22,8 +23,9 @@ export default class ListOfCharacters extends Component {
       <li key={character._id}>
         <h1>{character.name}</h1>
         <p>{character.affiliation}</p>
-        <img src={character.photoUrl} alt={character.name}/>
-        <p onClick={this.handleClick}>see more</p>
+        <Link to={`/detail/${character._id}`} >
+          <img src={character.photoUrl} alt={character.name}/>
+        </Link>
       </li>
     ));
     return (
