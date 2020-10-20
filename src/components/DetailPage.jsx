@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { fetchCharacter } from '../services/fetch-calls';
 
 export default class DetailPage extends Component {
 
@@ -8,8 +9,7 @@ export default class DetailPage extends Component {
 
   componentDidMount = () => {
     // eslint-disable-next-line max-len
-    fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters/${this.props.match.params.characterId}`)
-      .then(res => res.json())
+    fetchCharacter(this.props.match.params.characterId)
       .then(details => this.setState({ details }));
   }
 
