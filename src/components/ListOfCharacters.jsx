@@ -13,10 +13,6 @@ export default class ListOfCharacters extends Component {
       .then(characters => this.setState({ characters }));
   }
 
-  handleClick = ({ target }) => {
-    
-  }
-
   render() {
     const { characters } = this.state;
     const characterElements = characters.map(character => (

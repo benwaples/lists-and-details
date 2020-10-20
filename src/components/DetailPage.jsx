@@ -16,8 +16,15 @@ export default class DetailPage extends Component {
   render() {
     const { details } = this.state;
     return (
-      <div>
-        {details.name}
+      <div className="detailedCharacter">
+        <h1>{details.name}</h1>
+        <img src={details?.photoUrl} alt={details.name}/>
+        <p>Identified Gender: {details?.gender}</p>
+        <p>Eye Color: {details?.eye}</p>
+        <p>Love: {details?.love}</p>
+        <p>Weapon: {details?.weapon}</p>
+        <p>Profession: {details?.profession}</p>
+        <p>Predecessor: {details?.predecessor}</p>
       </div>
     );
   }
