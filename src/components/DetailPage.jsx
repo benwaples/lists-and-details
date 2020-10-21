@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchCharacter } from '../services/fetch-calls';
+import styles from '../App.css';
 
 export default class DetailPage extends Component {
 
@@ -16,7 +17,7 @@ export default class DetailPage extends Component {
   render() {
     const { details } = this.state;
     return (
-      <div className="detailedCharacter">
+      <div className={styles.detailedCharacter}>
         <h1>{details.name}</h1>
         <img src={details?.photoUrl} alt={details.name}/>
         <p>Identified Gender: {details?.gender}</p>

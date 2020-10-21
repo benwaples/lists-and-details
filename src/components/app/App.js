@@ -7,6 +7,7 @@ import {
 import DetailPage from '../DetailPage';
 import ListOfCharacters from '../ListOfCharacters';
 import Header from '../Header';
+import '../../App.css';
 
 
 export default function App() {

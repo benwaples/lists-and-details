@@ -6,7 +6,7 @@ export default class Header extends Component {
     return (
       <nav>
         <Link className="homeButton" to="/">Home</Link>
-        <h1>Avatar Character Info</h1>
+        <h1>Halloween Themed Avatar Info</h1>
       </nav>
     );
   }
