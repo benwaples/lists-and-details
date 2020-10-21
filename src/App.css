@@ -66,3 +66,16 @@ nav a {
 .affiliation {
   max-width: 380px;
 }
+
+.detailedCharacter {
+  width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid var(--color1);
+  border-radius: 20px;
+  background-color: var(--color4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
